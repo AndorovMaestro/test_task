@@ -1,0 +1,92 @@
+<?php
+// Your code here!
+$apple = [
+    "ябл0=>1",
+    "ябл1=>2",
+    "ябл2=>3",
+    "ябл3=>4",
+    "ябл4=>5",
+    "ябл5=>6",
+    "ябл6=>7",
+    "ябл7=>8",
+    "ябл8=>9",
+    "ябл9=>10",
+    ];
+    
+$pear = [
+    "груш0=>1",
+    "груш1=>2",
+    "груш2=>3",
+    "груш3=>4",
+    "груш4=>5",
+    "груш5=>6",
+    "груш6=>7",
+    "груш7=>8",
+    "груш8=>9",
+    "груш9=>10",
+    "груш10=>11",
+    "груш11=>12",
+    "груш12=>13",
+    "груш13=>14",
+    "груш14=>15",
+    ] ;
+    
+
+
+Class PalichThePlanter {
+ public function PlantApple($apple)
+ {
+   return array_push($apple,["ябл10=>11"]);     
+ 
+ }
+
+ public function PlantPear($pear)
+ {
+  return array_push($pear,["груш15=>16"]);     
+ }
+}
+
+
+Class PetrovichTheGetherer extends PalichThePlanter {
+    
+
+    
+ public function GetherApples($apple_trees)
+{
+   return $this->GetherApples= $apple_trees * mt_rand(40,50);
+}
+
+ public function GetherPear($pear_trees)
+{
+    return $this->GetherPear= $pear_trees * mt_rand(0,20);
+}
+
+ public function GetherAll()
+ {
+     return $this->GetherApples + $this->GetherPear;
+ }
+ 
+ public function Gethered_apples_gramms()
+ 
+ {
+  return  $this->GetherApples * mt_rand(150,180);
+ }
+
+public function Gethered_pears_gramms()
+ 
+ {
+  return  $this->GetherPears * mt_rand(130,170);
+ }
+
+}
+$plant_tree = new PalichThePlanter();
+$plant_apple_tree= $plant_tree->PlantApple($apple);
+$plant_pear_tree= $plant_tree->plantPear($pear);
+
+$a= new PetrovichTheGetherer();
+echo "Petrovich gethered" ." ". $a->GetherApples($plant_apple_tree) ." "."apples, My lord!" . PHP_EOL;
+echo "Petrovich gethered" ." ". $a->GetherPear($plant_pear_tree) ." "."pears, My lord!" . PHP_EOL;
+echo "Petrovich gethered" ." ". $a->GetherAll()." "."fruits, My lord!" . PHP_EOL;
+echo "So we got"." ".$a->Gethered_apples_gramms()." "."grams of apples, and"." ". $a->Gethered_apples_gramms()." "."grams of pears!";
+
+?>
