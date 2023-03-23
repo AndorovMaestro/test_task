@@ -34,13 +34,13 @@ $pear = [
 
 
 Class PalichThePlanter {
- public function PlantApple($apple)
+ public function plantApple($apple)
  {
    return array_push($apple,["ябл10=>11"]);     
  
  }
 
- public function PlantPear($pear)
+ public function plantPear($pear)
  {
   return array_push($pear,["груш15=>16"]);     
  }
@@ -51,42 +51,42 @@ Class PetrovichTheGetherer extends PalichThePlanter {
     
 
     
- public function GetherApples($apple_trees)
+ public function getherApples($apple_trees)
 {
-   return $this->GetherApples= $apple_trees * mt_rand(40,50);
+   return $this->getherApples= $apple_trees * mt_rand(40,50);
 }
 
- public function GetherPear($pear_trees)
+ public function getherPear($pear_trees)
 {
-    return $this->GetherPear= $pear_trees * mt_rand(0,20);
+    return $this->getherPear= $pear_trees * mt_rand(0,20);
 }
 
- public function GetherAll()
+ public function getherAll()
  {
-     return $this->GetherApples + $this->GetherPear;
+     return $this->getherApples + $this->getherPear;
  }
  
- public function Gethered_apples_gramms()
+ public function gethered_apples_gramms()
  
  {
-  return  $this->GetherApples * mt_rand(150,180);
+  return  $this->getherApples * mt_rand(150,180);
  }
 
-public function Gethered_pears_gramms()
+public function gethered_pears_gramms()
  
  {
-  return  $this->GetherPears * mt_rand(130,170);
+  return  $this->getherPears * mt_rand(130,170);
  }
 
 }
 $plant_tree = new PalichThePlanter();
-$plant_apple_tree= $plant_tree->PlantApple($apple);
+$plant_apple_tree= $plant_tree->plantApple($apple);
 $plant_pear_tree= $plant_tree->plantPear($pear);
 
 $a= new PetrovichTheGetherer();
-echo "Petrovich gethered" ." ". $a->GetherApples($plant_apple_tree) ." "."apples, My lord!" . PHP_EOL;
-echo "Petrovich gethered" ." ". $a->GetherPear($plant_pear_tree) ." "."pears, My lord!" . PHP_EOL;
-echo "Petrovich gethered" ." ". $a->GetherAll()." "."fruits, My lord!" . PHP_EOL;
-echo "So we got"." ".$a->Gethered_apples_gramms()." "."grams of apples, and"." ". $a->Gethered_apples_gramms()." "."grams of pears!";
+echo "Petrovich gethered" ." ". $a->getherApples($plant_apple_tree) ." "."apples, My lord!" . PHP_EOL;
+echo "Petrovich gethered" ." ". $a->getherPear($plant_pear_tree) ." "."pears, My lord!" . PHP_EOL;
+echo "Petrovich gethered" ." ". $a->getherAll()." "."fruits, My lord!" . PHP_EOL;
+echo "So we got"." ".$a->gethered_apples_gramms()." "."grams of apples, and"." ". $a->gethered_apples_gramms()." "."grams of pears!";
 
 ?>
